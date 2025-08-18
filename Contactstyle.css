@@ -1,0 +1,70 @@
+.container
+{
+    display: grid;
+    max-width: 1380px;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(10,minmax(111px,auto));
+    gap: 5px;
+
+}
+
+.container>*
+{
+    border: 2px solid aquamarine;
+    text-align: center;
+}
+
+header
+{
+    display: flex;
+    grid-column: 1/8;
+    grid-row: 1/2;
+    justify-content: space-between;
+}
+
+aside
+{
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+nav
+{
+    grid-column: 3/8;
+    grid-row: 1/2;
+}
+
+main
+{
+    grid-column: 1/8;
+    grid-row: 2/10;
+}
+
+footer
+{
+    grid-column: 1/8;
+    grid-row: 10/11;
+}
+
+ul li a
+{
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    margin-right: 6px;
+    transition: 0.2s;
+    
+}
+
+ul li
+{
+    list-style: none;
+    text-align: right;
+}
+
+ul li a:hover
+{
+    color: aliceblue;
+    background-color: orangered;
+    box-shadow: 20px 20px;
+}

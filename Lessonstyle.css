@@ -1,0 +1,218 @@
+body
+{
+    border-radius: 10px;
+}
+.container
+{
+    display: grid;
+    max-width: 1380px;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(10,minmax(111px,auto));
+    gap: 5px;
+
+}
+
+.container>*
+{
+    
+    text-align: center;
+}
+
+#fixes
+{
+    text-align: left;
+    font-size: 19px;
+}
+
+#herohallow
+{
+    display: flex;
+    width: 100%; 
+    height: 300px;
+    border-radius: 10px;
+    justify-content: center;                        
+
+}
+#herofest
+{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+#heroarmy, #heroChina, #herorio, #heroRE, #herodiwali
+{
+    display: flex;
+    width: 100%;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+h2
+{
+    text-align: left;
+}
+
+header
+{
+    background-color: darkgrey;
+    display: flex;
+    grid-column: 1/8;
+    grid-row: 1/2;
+    justify-content: space-between;
+}
+
+aside
+{
+    display: flex;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    color: rgb(37, 37, 37);
+    font-family: Jokerman;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav
+{
+    grid-column: 3/8;
+    grid-row: 1/2;
+}
+
+.active {
+  border-bottom: 2px solid black; /* underline current page */
+}
+
+main
+{
+    grid-column: 1/8;
+    grid-row: 2/11;
+    background-color: rgb(37, 37, 37);
+    border-radius: 10px;
+    color: azure;
+}
+
+footer
+{   
+    grid-column: 1/8;
+    grid-row: auto;
+    background-color: darkgrey;
+
+}
+
+ul li a
+{
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    margin-right: 6px;
+    transition: 0.2s;
+    
+}
+
+nav ul li
+{
+    list-style: none;
+    text-align: right;
+}
+
+ul li a:hover
+{
+    color: aliceblue;
+    background-color: rgb(37, 37, 37);
+    box-shadow: 20px 20px;
+    border-radius: 10px;
+}
+
+.overlay
+{
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center; 
+}
+
+.window
+{
+    background-color: aliceblue;
+    color: black;
+    text-align: left;
+    border-radius: 10px;
+    padding: 20px;
+    width: 1000px;
+}
+
+#HallowQuiz, #oktoberQuiz, #diwaliQuiz, #ramadanQuiz, #rioQuiz, #chineseNYQuiz, #armyQuiz 
+{
+    display: none;
+}
+#HallowQuiz:checked ~ .overlay, #oktoberQuiz:checked ~ .overlay, #diwaliQuiz:checked ~ .overlay, #ramadanQuiz:checked ~ .overlay, #rioQuiz:checked ~ .overlay, #chineseNYQuiz:checked ~ .overlay, #armyQuiz:checked ~ .overlay 
+{
+    display: flex;
+    transition: 0.6s;
+}
+
+.question
+{
+    display: inline-block;
+    margin-bottom: 7px;
+}
+
+#show-answer1, #show-answer2, #show-answer3, #show-answer4, #show-answer5, #show-answer6, #show-answer7
+{
+    display: none;
+}
+
+#show-answer1:checked ~ .answer, #show-answer2:checked ~ .answer, #show-answer3:checked ~ .answer, #show-answer4:checked ~ .answer, #show-answer5:checked ~ .answer, #show-answer6:checked ~ .answer, #show-answer7:checked ~ .answer
+{
+    display: block;
+}
+
+.answer
+{
+    display: none;
+}
+
+.quizbtn
+{
+    display: flex;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+    color: azure;
+    background: black;
+    padding: 5px 10px 2px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.6s;
+}
+
+.quizbtn:hover
+{
+    display: flex;
+    background: aliceblue;
+    color: black;
+    border: 1px solid;
+    
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.btn
+{
+    background: #3498db;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}

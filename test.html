@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HTML & CSS Quiz</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f0f0f0;
+        text-align: center;
+        padding: 50px;
+    }
+
+    /* Popup background */
+    .overlay {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.5);
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Popup content */
+    .popup {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        width: 300px;
+        text-align: left;
+    }
+
+    /* Hidden checkbox toggle */
+    #quiz-toggle {
+        display: none;
+    }
+    #quiz-toggle:checked ~ .overlay {
+        display: flex;
+    }
+
+    .question {
+        margin-bottom: 15px;
+    }
+
+    /* Fake result toggle */
+    #show-result {
+        display: none;
+    }
+    #show-result:checked ~ .result {
+        display: block;
+    }
+
+    .result {
+        display: none;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+    .btn {
+        background: #3498db;
+        color: white;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+</style>
+</head>
+<body>
+
+<!-- Button to open quiz -->
+<label for="quiz-toggle" class="btn">Take Quiz</label>
+
+<!-- Hidden toggle for popup -->
+<input type="checkbox" id="quiz-toggle">
+
+<!-- Popup Overlay -->
+<div class="overlay">
+    <div class="popup">
+        <h2>Mini Quiz</h2>
+        <div class="question">
+            <p>1. What does HTML stand for?</p>
+            <label><input type="radio" name="q1"> Hyper Text Makeup Language</label><br>
+            <label><input type="radio" name="q1" checked> Hyper Text Markup Language ✅</label><br>
+            <label><input type="radio" name="q1"> High Text Machine Language</label>
+        </div>
+
+        <div class="question">
+            <p>2. Which tag is used for the largest heading?</p>
+            <label><input type="radio" name="q2"> &lt;h6&gt;</label><br>
+            <label><input type="radio" name="q2" checked> &lt;h1&gt; ✅</label><br>
+            <label><input type="radio" name="q2"> &lt;header&gt;</label>
+        </div>
+
+        <!-- Fake submit (CSS toggle) -->
+        <label for="show-result" class="btn">Submit</label>
+        <input type="checkbox" id="show-result">
+
+        <div class="result">
+            🎉 You got 2/2 correct!
+        </div>
+
+        <!-- Close quiz -->
+        <br><br>
+        <label for="quiz-toggle" class="btn" style="background:#e74c3c;">Close</label>
+    </div>
+</div>
+
+</body>
+</html>
