@@ -1,7 +1,7 @@
 .container
 {
     display: grid;
-    max-width: 1380px;
+    max-width: auto;
     grid-template-columns: repeat(7,1fr);
     grid-template-rows: repeat(10,minmax(111px,auto));
     background-color:burlywood;
@@ -154,5 +154,6 @@ background-image: url(images/Bulb.jfif);
 .active {
   border-bottom: 2px solid bisque; /* underline current page */
 }
+
 
 
