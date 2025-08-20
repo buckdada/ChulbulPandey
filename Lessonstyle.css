@@ -5,7 +5,7 @@ body
 .container
 {
     display: grid;
-    max-width: 1380px;
+    max-width: auto;
     grid-template-columns: repeat(7,1fr);
     grid-template-rows: repeat(10,minmax(111px,auto));
     gap: 5px;
@@ -216,3 +216,4 @@ ul li a:hover
     cursor: pointer;
     text-decoration: none;
 }
+
