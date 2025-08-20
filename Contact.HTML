@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Jordan Lee</title>
+    <link rel="stylesheet" href="Contact.css">
+</head>
+<body>
+    <header>
+    <aside>CHULBUL PANDEY</aside>
+    <nav class="navclass">
+        <ul class="sidebar">
+            <li onclick="hideSidebar()">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#e8eaed">
+                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                </svg></a>
+            </li>
+            <li><a href="Lessons.html"> Leasons</a></li>
+            <li><a href="Resource.html">Resources</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+        <ul>
+            <li class="hideOnMobile" id="no-hover"><p><b></b></p></li>
+            <li class="hideOnMobile"><a href="Lessons.html"> Leasons</a></li>
+            <li class="hideOnMobile"><a href="Resource.html">Resources</a></li>
+            <li class="hideOnMobile"><a href="about.html">About</a></li>
+            <li class="hideOnMobile"><a href="index.html">Home</a></li>
+            <li onclick="showSidebar()">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#e8eaed">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                </svg></a>
+            </li>
+        </ul>
+    </nav>
+    </header>
+    <section class="top">
+        <h1>Contact Me</h1>
+    </section>
+
+    <section class="content">
+        <h4>"I'm always open to new opportunities and collaborations. If you have a project in mind, want to discuss ideas, or just want to connect, feel free to reach out."</h4>
+    </section>
+
+    <div class="input-container">
+        <div class="inputbox">
+            <input type="text" placeholder="First Name" required="required">
+        </div>
+        <div class="inputbox">
+            <input type="text" placeholder="Last Name" required="required">
+        </div>
+        <div class="inputbox">
+            <input type="text" placeholder="Email" required="required">
+        </div>
+        <div class="inputbox">
+            <input type="text" placeholder="Subject" required="required">
+        </div>
+        <div class="inputbox">
+            <input type="text" placeholder="Message" required="required">
+        </div>
+    </div>
+
+    <div class="submit-container">
+        <button class="submit-button" onclick="clearFields()">Enter</button>
+    </div>
+
+    <section class="bottom">
+        <h2>Alternative Contact Methods</h2>
+        <p><b>Email:</b> jordanlee.dev@gmail.com</p>
+        <p><b>Phone:</b> +1 (987) 654-3210</p>
+
+        <h2>Social Media</h2>
+        <p><a href="https://github.com/jordanlee">GitHub</a></p>
+        <p><a href="https://www.linkedin.com/in/jordanlee">LinkedIn</a></p>
+    </section>
+
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+
+        function clearFields() {
+            document.querySelectorAll('.inputbox input').forEach(input => input.value = '');
+        }
+    </script>
+</body>
+</html>
